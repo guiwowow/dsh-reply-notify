@@ -14,11 +14,8 @@ Settings → General → **回答完成通知 / Turn completion notifications**:
 
 Windows + DSH desktop 0.2.2-rc.1 or newer.
 
-```bash
-dsh plugin add dsh-reply-notify
-```
-
-Or install from this repository: clone it, then add the folder as a bundle in the desktop profile (`plugin_manager install_bundle`). Restart DSH once after installing — the host half only loads at boot.
+- From the plugin market, once listed: search `dsh-reply-notify`.
+- Manually: copy this folder into `~/.dsh/plugins/src/`, install it as a bundle in the desktop profile, then restart DSH once — the host half only loads at boot.
 
 ## How it works
 
