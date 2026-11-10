@@ -1,0 +1,54 @@
+{
+	"name": "dsh-reply-notify",
+	"version": "0.3.2",
+	"type": "module",
+	"description": "Desktop notification when a turn finishes. Choose never, only when unfocused, or always.",
+	"license": "MIT",
+	"author": "Guiwow",
+	"keywords": [
+		"dsh",
+		"dsh-plugin",
+		"deepseek-harness",
+		"notification",
+		"toast",
+		"windows"
+	],
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/guiwowow/dsh-reply-notify.git"
+	},
+	"exports": {
+		".": "./index.js",
+		"./client": "./client.js",
+		"./cordis.patch.yml": "./cordis.patch.yml",
+		"./locale/*.json": "./locale/*.json",
+		"./icon": "./icon.svg"
+	},
+	"files": [
+		"index.js",
+		"client.js",
+		"cordis.patch.yml",
+		"locale/*.json",
+		"icon.svg",
+		"toast.ps1"
+	],
+	"icon": "./icon.svg",
+	"dsh": {
+		"bundle": {
+			"patch": "./cordis.patch.yml"
+		},
+		"client": {
+			"platform": "web",
+			"immediately": true,
+			"inject": [
+				"@deepseek-ai/dsh-client-ui-session"
+			],
+			"external": [
+				"@deepseek-ai/dsh-client-ui-primitives"
+			]
+		}
+	},
+	"engines": {
+		"dsh": ">=0.2.2-rc.1 <0.3.0-0"
+	}
+}

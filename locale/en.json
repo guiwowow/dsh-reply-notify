@@ -1,0 +1,6 @@
+{
+	"meta": {
+		"title": "Turn completion notifications",
+		"description": "Shows a desktop notification when a reply finishes. Choose Never, Only when unfocused, or Always."
+	}
+}
