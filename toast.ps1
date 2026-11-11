@@ -11,7 +11,7 @@ try {
   $texts.Item(0).AppendChild($xml.CreateTextNode($Title)) | Out-Null
   $texts.Item(1).AppendChild($xml.CreateTextNode($Body)) | Out-Null
   $toast = [Windows.UI.Notifications.ToastNotification]::new($xml)
-  [Windows.UI.Notifications.ToastNotificationManager]::CreateToastNotifier('com.deepseek.dsh').Show($toast)
+  [Windows.UI.Notifications.ToastNotificationManager]::CreateToastNotifier('electron.app.DeepSeek Harness').Show($toast)
   Add-Content -Path $log -Value "$(Get-Date -Format o) ps: shown"
 } catch {
   Add-Content -Path $log -Value "$(Get-Date -Format o) ps: failed $($_.Exception.Message)"

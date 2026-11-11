@@ -19,7 +19,7 @@ Windows + DSH desktop 0.2.2-rc.1 or newer.
 
 ## How it works
 
-- **Host half** (`index.js`) listens to the host's `agent/status` event. A turn that goes `running → idle` raises a Windows toast through `toast.ps1` (WinRT, AppUserModelId `com.deepseek.dsh`).
+- **Host half** (`index.js`) listens to the host's `agent/status` event. A turn that goes `running → idle` raises a Windows toast through `toast.ps1` (WinRT, AppUserModelId `electron.app.DeepSeek Harness`, the identity of the installed app — a custom AUMID gets its own notification setting that Windows can switch off).
 - **Client half** (`client.js`) draws the settings row and reports the two facts the host cannot see: the selected mode, and whether the window has focus. It posts them to `/__dsh-reply-notify/state`.
 - Subagent sessions stay quiet. One turn raises one toast.
 - The browser `Notification` API is deliberately not used: in the desktop shell it silently no-ops.

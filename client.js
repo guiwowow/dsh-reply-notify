@@ -9,7 +9,7 @@ id: 'dsh-reply-notify',
 factory(require) {
 const React = require('react')
 const primitives = require('@deepseek-ai/dsh-client-ui-primitives')
-const VERSION = '0.3.2'
+const VERSION = '0.3.3'
 const MODE_KEY = 'dsh-reply-notify.mode'
 const MODES = ['never', 'unfocused', 'always']
 const DEFAULT_MODE = 'unfocused'
